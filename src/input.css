@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+
+@theme {
+  --animate-wiggle: wiggle 1s  steps(19) infinite;
+  --animate-slide: slide 2s cubic-bezier(0, .97, .36, .98);
+  --animate-fadeinb: fadeinb 1s cubic-bezier(0, .97, .36, .98); 
+
+  @keyframes wiggle {
+    0%, 100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeinb {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
